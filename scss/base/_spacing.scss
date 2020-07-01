@@ -1,0 +1,272 @@
+// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% GENERAL SPACING AND BASE STYLES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+* {
+    box-sizing: border-box;
+}
+
+//DRY----------------------------------------------------------------------
+
+//declaring borders-----------------------------
+main, 
+.bar-chart-container,
+.donut-chart-container,
+aside,
+#new-members,
+#recent-activity,
+#activities .individuals:not(:last-child),
+#message-container,
+#area-chart-container {
+    @include border;
+}
+
+//containers sharing same border styles----------
+
+.bar-chart-container,
+#new-members {
+    @include borderstyle(none solid solid none);
+}
+
+main,
+#social-stats,
+.donut-chart-container,
+#activities .individuals,
+#recent-activity,
+#message-container {
+    @include borderstyle(none none solid none);
+}
+
+//elements sharing same padding-------------------
+
+header>h1,
+#activities li,
+#activities li>span {
+    padding: .5em;
+}
+
+#social-stats,
+.bar-chart-container,
+.donut-chart-container,
+#new-members,
+#recent-activity,
+#message-container,
+#settings {
+    padding: 1em;
+}
+
+//elements/containers sharing same margin ----------------
+
+header>div,
+#traffic-nav {
+    margin-left: auto;
+}
+
+header>div,
+#profile-info a,
+#profile-info .profile-photo {
+    margin-right: 1em;
+}
+
+h3 ~ #message-form,
+#message-search ~ #message-field,
+#message-field ~ #send-button,
+h3 ~ #toggle-container,
+#toggle-container ~ #timezone {
+    margin-top: .65em;
+    margin-bottom: .5em;
+    @include mq(s) {
+        margin-bottom: 1.22em;
+    }
+}
+
+
+//elements/containers sharing same width-----------
+
+div, //makes everything fluid
+#timezone { 
+    width: 100%;
+    max-width: 100%;
+}
+
+//END DRY SECTION------------------------------------------------------------
+
+//footer area -----
+
+footer {
+    height: 2vh;
+    @include mq(xs) {
+        display: none;
+    }
+}
+
+// end footer area 
+
+// header area -------------- 
+
+header {
+    padding: .5em 0;
+}
+
+header>div {
+    width: 14rem;
+    padding-right: 1em;
+}
+
+#profile-info {
+    & a {
+        border-right: 1.5px solid $nav-color;
+        padding: .5em 1em 0 0;
+    }
+}
+
+//end header area -----------
+
+//nav area ===============
+
+nav a {
+    @include mq(m) {
+        margin-top: .5em;
+    }
+}
+
+// end nav area ========= 
+
+// main dashboard traffic area and alert area 
+
+main>h2 {
+    margin: .75em;
+}
+
+#traffic-nav-container {
+    min-width: 100%;
+    margin: 2em 1em;
+    padding-right: 1.5em;
+}
+
+// end main dashboard area ===== 
+
+// secondary charts area ========
+
+#secondary-charts div {
+    height: 100%;
+}
+
+#area-chart-container {
+    @include mq(xl) {
+        @include borderstyle(none none solid none);
+        height: 10.5em;
+    }
+}
+
+//end secondary charts area =======
+
+// social stats area ======= 
+
+#social-container {
+    margin-bottom: 1em;
+    & li {
+        @include mq(s) {
+            width: 50em;
+        }
+        @include mq(m) {
+            width: 25em;
+        }
+        @include mq(l) {
+            width: 10em;
+        }
+    }
+}
+
+#social-container {
+    display: block;
+}
+
+hgroup {
+    padding-left: 1em;
+}
+
+#social-stats {
+    @include mq(xl) {
+        @include borderstyle(none solid solid none);
+    }
+}
+
+// end social stats area =======
+
+// activities area ====================== 
+
+.individuals,
+.time-and-button-container,
+#toggle-container {
+    @include container-center;
+}
+
+.individual-info {
+    max-width: 70%;
+    @include mq(s) {
+        max-width: 58%;
+    }
+}
+
+#activities h3,
+.member-photo-container {
+    max-width: min-content;
+}
+
+.individual-info p {
+    margin-bottom: .25em;
+}
+
+#activities .individuals:last-child {
+    border: none;
+}
+
+#message-container {
+    @include mq(s) {
+        @include borderstyle(none solid none none);
+    }
+}
+
+#new-members,
+#recent-activity {
+    @include mq(xl) {
+        @include borderstyle(none solid none none);
+    }
+}
+
+.members-container,
+.time-and-button-container,
+#button-container {
+    @include center;
+}
+
+.time-and-button-container {
+    @include mq(xl) {
+        height: 45%;
+    }
+}
+
+label { /* toggle switch spacing styles  */
+    margin-top: 1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

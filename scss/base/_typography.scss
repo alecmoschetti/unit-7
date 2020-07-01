@@ -1,0 +1,56 @@
+// MAIN TYPOGRAPHY STYLES PAGE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+//google fonts 
+
+body {
+    font-size: .6rem;
+    @include mq(s) {
+        font-size: .8rem;
+    }
+}
+
+.bold {
+    font-weight: bold;
+}
+
+header h4 {
+    font-size: .8rem;
+
+    @include mq(s) {
+        font-size: 1rem;
+    }
+}
+
+main>h2 {
+    font-size: .9rem;
+    font-weight: bold;
+}
+
+h2,
+h3 { 
+    font-weight: bold;
+}
+
+#social-stats h5 {
+    text-align: left;
+    font-size: 1rem;
+}
+
+#social-stats h6 {
+    font-size: .68rem;
+}
+
+.individual-info p,
+.individual-info a {
+    font-size: .7rem;
+    @include mq(s) {
+        font-size: .8rem;
+    }
+}
+
+.arrow {
+    font-size: 1.6em;
+    opacity: .5;
+    @include mq(s) {
+        font-size: 1.2em;
+    }
+}

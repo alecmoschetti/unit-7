@@ -1,0 +1,79 @@
+//IMAGE STYLES ONLY 
+
+#bell {
+    width: 2.5em;
+    @include mq(s) {
+        width: 2em;
+    }
+}
+  
+.profile-photo {
+    border-radius: 50%;
+    width: 3em;
+}
+
+nav img {
+    width: 2em;
+    max-width: 2em;
+    margin: .75em 1em;
+}
+
+#bar-chart,
+#donut-chart {
+    width: 50%;
+}
+
+.circle {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+
+.social-icons {
+    width: 1em; 
+}
+
+#facebook {
+    width: 1.5em;
+}
+
+#social-container li {
+    display: inherit;
+    margin: 1em;
+    border: 1px solid lightgray;
+    padding: .75em;
+}
+
+#area-chart-container {
+    display: none;
+    @include mq(xl) {
+        display: initial;
+    }
+}
+
+.member-photo {
+    min-width: 2.5em;
+    max-width: 3em;
+    border-radius: 50%;
+    @include mq(s) {
+        max-width: 4em;
+    }
+    @include mq(l) {
+        max-width: 5em;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

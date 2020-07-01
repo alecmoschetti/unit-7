@@ -1,0 +1,119 @@
+// GRID STYLE PAGE ONLY %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+#site-wrapper,
+#secondary-charts,
+#activities {
+    display: grid;
+    grid-auto-rows: min-content;
+    grid-template-columns: 1fr; /* STYLE FOR MOBILE FIRST  */
+    @include mq(s) {
+    grid-template-columns: repeat(2, 1fr); /* STYLING FOR TWO COLUMNS SLIGHTLY BIGGER SCREENS, NAV STILL STAYS UNDER HEADER */
+    }
+}
+
+#site-wrapper { /* BIG SCREEN STYLING NAV GOES ON THE LEFT SIDE OF PAGE */
+    @include mq(m) {
+        grid-template-columns: 7% repeat(2, 46.5%);
+    }
+    @include mq(l) {
+        grid-template-columns: 5% repeat(2, 47.5%);
+    }
+    @include mq(xl) {
+        grid-template-columns: 5% repeat(4, 23.75%);
+    }
+}
+
+#activities { /* BIG SCREEN STYLING ACTIVITIES ALL GO ON ONE ROW */
+    @include mq(xl) {
+        grid-template-columns: repeat(4, 25%);
+    }
+}
+
+header {
+    grid-area: 1 / 1 / 2 / -1;
+}
+
+nav {
+    grid-area: 2 / 1 / 3 / -1;
+    @include mq(m) {
+        grid-area: 2 / 1 / 9 / 2; 
+    }
+}
+
+#main-dash {
+    grid-area: 3 / 1 / 4 / -1;
+    @include mq(m) {
+        grid-area: 2 / 2 / 3 / -1; 
+    }
+}
+
+#secondary-charts {
+    grid-area: 4 / 1 / 6 / -1;
+    place-items: center;
+    @include mq(s) {
+    grid-area: 4 / 1 / 5 / -1;
+    }
+    @include mq(m) {
+        grid-area: 3 / 2 / 4 / -1;
+    }
+}
+
+#bar-chart-container {
+    grid-area: 4 / 1 / 5 / -1;
+    @include mq(s) {
+    grid-area: 4 / 1 / 5 / 2;
+    }
+    @include mq(m) {
+        grid-area: 3 / 2 / 4 / 3;
+    }
+    @include mq(xl) {
+        grid-area: 3 / 2 / 4 / 4;
+    }
+}
+
+#donut-chart-container {
+    grid-area: 5 / 1 / 6 / -1;
+    @include mq(s) {
+    grid-area: 4 / 2 / 5 / -1;
+    }
+    @include mq(m) {
+        grid-area: 3 / 3 / 4 / -1;
+    }   
+    @include mq(xl) {
+        grid-area: 3 / 4 / 4 / -1;
+    }
+}
+
+#bar-chart,
+#donut-chart {
+    place-self: center;
+}
+
+#area-chart-container {
+    @include mq(xl) {
+        grid-area: 4 / 4 / 5 / -1;
+    }
+}
+
+#social-stats {
+    grid-area: 6 / 1 / 7 / -1;
+    @include mq(s) {
+    grid-area: 5 / 1 / 6 / -1;
+    }
+    @include mq(m) {
+        grid-area: 4 / 2 / 5 / -1;
+    }
+    @include mq(xl) {
+        grid-area: 4 / 2 / 5 / 4;
+    }
+}
+
+#activities {
+    grid-area: 7 / 1 / 9 / -1;
+    @include mq(s) {
+    grid-area: 6 / 1 / 8 / -1;
+    }
+    @include mq(m) {
+        grid-area: 5 / 2 / 7 / -1;
+    }
+}

@@ -1,0 +1,89 @@
+//MIXINS%%%%%%%%%%%%%%% most of these are unecessary and overkill I just wanted to have fun and experiment with them
+
+//media query mixin, got this from the sass basics course here on TH. map that it's pulling from is on variable page.
+@mixin mq($break) {
+    $value: map-get($breakpoints, $break);
+    $s: map-get($breakpoints, 's');
+
+    @if $value < $s {
+        @media (max-width: $value) {
+            @content;
+        }
+    }
+
+    @else {
+        @media (min-width: $value) {
+            @content;
+        }
+    }
+}
+
+/* FLEX MIXINS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+//flex display mixin
+@mixin flex {
+    display: flex;
+    @content;
+}
+
+//centering flex items on both x and y
+@mixin flex-center {
+    justify-content: center;
+    align-items: center;
+    @content;
+}
+
+//flex flow mixin 
+@mixin flow($direction, $wraps:null) {
+    flex-flow: $direction $wraps;
+}
+
+//declaring which direction to flex justify content
+@mixin justify($direction) {
+    justify-content: $direction;
+    @content;
+}
+
+//declaring which direction to flex align-items 
+@mixin align-items($direction) {
+    align-items: $direction;
+    @content;
+}
+
+/* END FLEX MIXINS %%%%%%%%%%%%%%%%%%%%%%%%% */
+
+//100% width mixin - find I am declaring this constantly so I put it as a mixin, not super useful but hey whatevs
+@mixin wmax {
+    max-width: 100%;
+    @content;
+}
+
+//100% height mixin - same as above
+@mixin hmax {
+    max-height: 100%;
+    @content;
+}
+
+//centering mixin
+@mixin center {
+    margin: 1em auto;
+    @content;
+}
+
+//for container divs
+@mixin container-center {
+    width: 90%;
+    margin: 1em auto;
+    @content;
+}
+
+@mixin border {
+    border-width: 1px;
+    border-color: $border-color;
+    @content;
+}
+
+@mixin borderstyle($style) {
+    border-style: $style;
+    @content;
+}

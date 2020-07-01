@@ -1,0 +1,96 @@
+//FORM STYLING PAGE ONLY 
+
+#searchbar-container {
+    min-width: 70%;
+    margin-left: auto;
+    border-style: none none solid solid;
+    border-bottom-left-radius: 5px;
+    @include mq(s) {
+        min-width: 80%;
+    }
+    @include mq(m) {
+        min-width: 85%;
+    }
+    @include mq(l) {
+        min-width: 90%;
+    }
+    @include mq(xl) {
+        min-width: 92%;
+    }
+}
+
+#searchbar {
+    margin: 1em;
+    width: 80%;
+    @include mq(s) {
+        width: 60%;
+    }
+    @include mq(m) {
+        width: 35%;
+    }
+    @include mq(l) {
+        width: 25%;
+    }
+}
+
+#searchbar,
+#message-search,
+#message-field,
+#timezone {
+    border-style: solid;
+    border-radius: 3px;
+}
+
+#searchbar-container,
+#searchbar,
+#message-search,
+#message-field,
+#timezone {
+    @include border;
+}
+
+#message-form {
+    width: 90%;
+    margin: 0 auto;
+    @include mq(xl) {
+        height: 100%;
+    }
+}
+
+#message-search {
+    @include mq(xl) {
+        height: 8%;
+    }
+}
+
+#message-field {
+    height: 3.5rem;
+    @include mq(xl) {
+        height: 70%;
+    }
+}
+
+#message-search::placeholder,
+#message-field::placeholder {
+    font-size: .5rem;
+    padding: 1rem 0 1rem 2rem;
+}
+
+#timezone { /* GOT THE HELP FOR THIS FROM CSSTIPS css-tricks.com/styling-a-select-like-its-2019/ mine is modified though */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: .5em;
+    max-width: 100%;
+    border: 1px solid $border-color;
+    box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+    border-radius: .5em;
+    background-color: rgba(234, 233, 240, 0.6);
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSIxNzkyIiB2aWV3Qm94PSIwIDAgMTc5MiAxNzkyIiB3aWR0aD0iMTc5MiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTM5NSA3MzZxMCAxMy0xMCAyM2wtNDY2IDQ2NnEtMTAgMTAtMjMgMTB0LTIzLTEwbC00NjYtNDY2cS0xMC0xMC0xMC0yM3QxMC0yM2w1MC01MHExMC0xMCAyMy0xMHQyMyAxMGwzOTMgMzkzIDM5My0zOTNxMTAtMTAgMjMtMTB0MjMgMTBsNTAgNTBxMTAgMTAgMTAgMjN6Ii8+PC9zdmc+');
+    background-repeat: no-repeat;
+    /* arrow icon position (1em from the right, 50% vertical)*/
+    background-position: right .7em top 50%;
+    /* icon size, then gradient */
+    background-size: 1.5em auto;
+    background-blend-mode: color;
+}

@@ -1,0 +1,71 @@
+/* COLOR PAGE ONLY / KINDA USELESS BUT ¯\_(ツ)_/¯  */
+
+// NEUTRAL ACCENT COLOR ====
+
+html {
+    background-color: $neutral-accent;
+}
+
+// HEADING COLOR ===========
+
+h2,
+h3,
+#social-stats > h3  {
+    color: $heading-color;
+}
+
+// PRIMARY COLOR ===========
+
+header,
+.circle,
+#send-button,
+#save-button {
+    background-color: $primary-color;
+}
+
+#social-stats h6 {
+    color: $primary-color;
+}
+
+// DARK ACCENT COLOR ============= 
+
+#searchbar-container,
+#message-search,
+#message-field,
+#timezone,
+#social-container li {
+    background-color: $dark-accent;
+}
+
+header {
+    color: $dark-accent;
+}
+
+// OTHER COLORS ===========
+
+nav {
+    background-color: $nav-color;
+}
+
+#send-button,
+#save-button,
+#cancel-button,
+.active {
+    color: white;
+}
+
+#cancel-button {
+    background-color: $cancel-color;
+}
+
+#timezone {
+    color: $border-color;
+}
+
+#timezone option{
+    color: black;
+}
+
+.active {
+    background-color: $active-color;
+}

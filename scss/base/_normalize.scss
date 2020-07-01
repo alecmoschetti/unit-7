@@ -1,0 +1,77 @@
+/* MY VERY OWN NORMALIZE :) ALEC MOSCHETTI JUNE 2020*/
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
+#site-wrapper {
+  height: 100vh;
+  width: 100vw;
+  max-width: 100vw;
+}
+
+#site-wrapper > * { //fixed an overflow issue I was having on small screens (under 400px)
+  min-width: 0; 
+}
+ 
+/* ALL CONTAINERS/ELEMENTS ON THE PAGE FOR RESPONSIVE ISSUES */
+header,
+main,
+article,
+aside,
+section,
+form,
+canvas,
+div,
+ul,
+li,
+button,
+a,
+textarea,
+input {
+  max-width: 100%;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

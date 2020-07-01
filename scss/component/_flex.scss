@@ -1,0 +1,119 @@
+//declaring flex containers -------
+
+header, 
+header > div,
+nav,
+main, 
+#searchbar-container,
+#traffic-nav-container, 
+#traffic-nav,
+.circle,
+#social-container,
+#new-members,
+#recent-activity,
+#activities .individuals,
+.individuals p,
+#message-container,
+#message-form,
+#settings,
+#button-container,
+.time-and-button-container {
+    @include flex;
+}
+
+//end flex container declarations -----------------
+
+header > div,
+#searchbar-container,
+#traffic-nav {
+    @include justify(flex-end);
+}
+
+header > div,
+#traffic-nav-container {
+    @include align-items(center);
+}
+
+nav,
+.circle  {
+    @include flex-center;
+}
+
+#social-container {
+    @include flex-center;
+    @include mq(s) {
+        @include justify(space-between);
+    }
+    & li {
+        @include mq(s) {
+            @include justify(center);
+        }
+    }
+    @include mq(m) {
+        @include justify(space-around);
+    }
+}
+
+nav {
+    @include mq(m) {
+        @include flow(column);
+        @include justify(flex-start);
+        @include align-items(center);
+    }
+}
+
+main {
+    @include flow(wrap);
+}
+
+#traffic-nav {
+    align-content: space-around;
+}
+
+#new-members,
+#recent-activity,
+#message-form,
+#settings,
+#message-container,
+.time-and-button-container {
+    @include flow(column);
+}
+
+#new-members,
+#recent-activity,
+#message-form,
+#settings {
+    @include justify(space-evenly);
+}
+
+.individuals {
+    @include flow(row, nowrap);
+}
+
+.arrow,
+.individual-info {
+    align-self: center;
+}
+
+.individuals,
+#button-container,
+#message-container,
+.time-and-button-container {
+    @include justify(space-between);
+}
+
+#message-form,
+#settings {
+    @include mq(xl) {
+        @include justify(space-between);
+    }
+}
+
+#toggle-container {
+    @include mq(xl) {
+        height: 30%;
+        @include flex;
+        @include flow(column);
+        @include justify(flex-start);
+    }
+}

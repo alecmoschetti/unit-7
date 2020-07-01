@@ -1,0 +1,23 @@
+//VARIABLE PAGE%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+// color variables
+$primary-color: #6B6EAA;
+$nav-color: #5C5C8B;
+$dark-accent: #EAE9F0;
+$neutral-accent: #f5f5f5;
+$heading-color: #585858;
+$border-color: rgba(128, 128, 128, 0.4);
+$active-color: #84CA8F;
+$alert-color: #534992;
+$cancel-color: #637D8E;
+
+
+//breakpoint map variable
+$breakpoints: (
+    'xs': 575px,
+    's': 576px,
+    'm': 768px,
+    'l': 992px,
+    'xl': 1200px,
+    'xxl': 1280px
+);

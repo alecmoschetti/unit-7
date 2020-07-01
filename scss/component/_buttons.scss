@@ -1,0 +1,27 @@
+/* BUTTON STYLES ONLY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+li button {
+    margin: 0 .15em;
+    border: none;
+    cursor: pointer;
+    background: inherit;
+}
+
+#send-button,
+#save-button,
+#cancel-button {
+    height: 3em;
+    padding: .25em;
+    font-size: .5rem;
+    border-radius: 3px;
+    border: none;
+}
+
+#save-button,
+#cancel-button {
+    width: 45%;
+}
+
+.active {
+    border-radius: 1em;
+}
