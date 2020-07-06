@@ -82,6 +82,7 @@ h3 ~ #toggle-container,
 //elements/containers sharing same width-----------
 
 div, //makes everything fluid
+canvas, 
 #timezone { 
     width: 100%;
     max-width: 100%;
@@ -137,7 +138,6 @@ main>h2 {
 }
 
 #traffic-nav-container {
-    min-width: 100%;
     margin: 2em 1em;
     padding-right: 1.5em;
 }
@@ -236,7 +236,7 @@ hgroup {
 .members-container,
 .time-and-button-container,
 #button-container {
-    @include center;
+    margin: 1em auto;
 }
 
 .time-and-button-container {

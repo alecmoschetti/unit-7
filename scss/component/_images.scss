@@ -63,8 +63,23 @@ nav img {
     }
 }
 
+//CHARTS
 
+#traffic-chart-container {
+    position: relative;
+    @include center;
+    height: 30vh;
+    width: 90vw;
+    @include mq(l) {
+        max-width: 85vw;
+        height: 40vh;
+    }
+}
 
+canvas {
+    display: block;
+    @include center;
+}
 
 
 
