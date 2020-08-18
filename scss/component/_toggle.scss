@@ -232,19 +232,3 @@
   .switch-light.switch-material.switch-light input:focus:not(:checked) ~ span:after,
   .switch-material.switch-toggle input:focus:checked + label:after {
     visibility: visible; } }
-
-/* Bugfix for older Webkit, including mobile Webkit. Adapted from
- * http://css-tricks.com/webkit-sibling-bug/
- */
-@media only screen and (-webkit-max-device-pixel-ratio: 2) and (max-device-width: 80em) {
-  .switch-light,
-  .switch-toggle {
-    -webkit-animation: webkitSiblingBugfix infinite 1s; } }
-
-@-webkit-keyframes webkitSiblingBugfix {
-  from {
-    -webkit-transform: translate3d(0, 0, 0); }
-  to {
-    -webkit-transform: translate3d(0, 0, 0); } }
-
-/*# sourceMappingURL=toggle-switch.css.map */
