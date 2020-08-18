@@ -1,10 +1,15 @@
 /* BUTTON STYLES ONLY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
 
+
 li button {
     margin: 0 .15em;
     border: none;
-    cursor: pointer;
     background: inherit;
+}
+
+.alert-banner-close, 
+li button {
+    cursor: pointer;
 }
 
 #send-button,
@@ -12,7 +17,7 @@ li button {
 #cancel-button {
     height: 3em;
     padding: .25em;
-    font-size: .5rem;
+    font-size: .6rem;
     border-radius: 3px;
     border: none;
 }
@@ -24,4 +29,17 @@ li button {
 
 .active {
     border-radius: 1em;
+    background-color: $active-color;
+    color: white;
+}
+
+.notification-dot {
+    fill: #FF6B6B;
+    stroke: #FFF;
+    stroke-width: 0.1em;
+    // top: -5px;
+    // left: -10px;
+    // font-size: 12px;
+    // color: #FFF;
+    // text-align: center;
 }

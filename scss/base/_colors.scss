@@ -17,6 +17,7 @@ h3,
 // PRIMARY COLOR ===========
 
 header,
+#alert,
 .circle,
 #send-button,
 #save-button {
@@ -50,7 +51,8 @@ nav {
 #send-button,
 #save-button,
 #cancel-button,
-.active {
+.active,
+#message-alert {
     color: white;
 }
 
@@ -68,4 +70,8 @@ nav {
 
 .active {
     background-color: $active-color;
+}
+
+#alert {
+    color: $neutral-accent;
 }

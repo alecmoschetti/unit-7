@@ -1,26 +1,21 @@
 //IMAGE STYLES ONLY 
 
 #bell {
-    width: 2.5em;
+    width: 4.5em;
     @include mq(s) {
-        width: 2em;
+        width: 4em;
     }
 }
-  
+
 .profile-photo {
     border-radius: 50%;
-    width: 3em;
+    width: 3.2em;
 }
 
 nav img {
     width: 2em;
     max-width: 2em;
     margin: .75em 1em;
-}
-
-#bar-chart,
-#donut-chart {
-    width: 50%;
 }
 
 .circle {
@@ -44,13 +39,6 @@ nav img {
     padding: .75em;
 }
 
-#area-chart-container {
-    display: none;
-    @include mq(xl) {
-        display: initial;
-    }
-}
-
 .member-photo {
     min-width: 2.5em;
     max-width: 3em;
@@ -65,9 +53,33 @@ nav img {
 
 //CHARTS
 
-#traffic-chart-container {
-    position: relative;
+.donut-wrapper,
+.bar-wrapper,
+#traffic-chart-container, 
+canvas {
     @include center;
+}
+
+.donut-wrapper {
+    max-height: 75%;
+}
+
+.donut-wrapper,
+.bar-wrapper {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    width: 75%;
+    @include mq(s) {
+        width: 75%;
+    }
+    @include mq(m) {
+        width: 70%;
+    }
+}
+
+#traffic-chart-container {
+    padding-bottom: 1rem;
+    position: relative;
     height: 30vh;
     width: 90vw;
     @include mq(l) {
@@ -78,8 +90,8 @@ nav img {
 
 canvas {
     display: block;
-    @include center;
 }
+
 
 
 

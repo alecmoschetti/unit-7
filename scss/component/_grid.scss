@@ -89,12 +89,6 @@ nav {
     place-self: center;
 }
 
-#area-chart-container {
-    @include mq(xl) {
-        grid-area: 4 / 4 / 5 / -1;
-    }
-}
-
 #social-stats {
     grid-area: 6 / 1 / 7 / -1;
     @include mq(s) {
@@ -102,9 +96,6 @@ nav {
     }
     @include mq(m) {
         grid-area: 4 / 2 / 5 / -1;
-    }
-    @include mq(xl) {
-        grid-area: 4 / 2 / 5 / 4;
     }
 }
 

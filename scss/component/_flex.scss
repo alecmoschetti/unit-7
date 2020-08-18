@@ -1,12 +1,16 @@
 //declaring flex containers -------
 
 header, 
-header > div,
+#profile-info,
 nav,
+#alert,
+.alert-banner,
 main, 
 #searchbar-container,
 #traffic-nav-container, 
 #traffic-nav,
+.bar-wrapper,
+.donut-wrapper,
 .circle,
 #social-container,
 #new-members,
@@ -23,19 +27,27 @@ main,
 
 //end flex container declarations -----------------
 
-header > div,
+#profile-info,
 #searchbar-container,
 #traffic-nav {
     @include justify(flex-end);
 }
 
-header > div,
-#traffic-nav-container {
+#profile-info,
+#traffic-nav-container,
+.alert-banner {
     @include align-items(center);
 }
 
+.bar-wrapper,
+.donut-wrapper {
+    @include justify(center);
+}
+
 nav,
-.circle  {
+.circle,
+.bar-wrapper,
+.donut-wrapper  {
     @include flex-center;
 }
 
